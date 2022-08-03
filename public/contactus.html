@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=submit] {
+            color: #fff;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: #3e2093;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+    <!--Clock Script-->
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+</head>
+
+
+<body onload="startTime()" onload="alert(message)">
+    <div>&nbsp;</div>
+
+    <div>
+        <span class="text5" style="font-family:FreightTextPro, Georgia, serif;">Send us a Message</span><br><br>
+        <hr color="brown" width="800px" style="position: relative; left: 20%;">
+    </div>
+    <div>&nbsp;</div>
+    <div>
+
+        <div class="container">
+            <div class="content">
+                <div class="left-side">
+                    <div class="bookshelf details">
+                        <i class="fas fa-book-open"></i>
+                        <div class="topic">Hostel Warden</div>
+                        <div class="text-one">Dr.Nidhi Lal</div>
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+91 00000 00000</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">nidhi@iiitn.ac.in</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message</div>
+                    <p>Contact Us</p>
+                    <!-- <form action="#"> -->
+                    <form action="welcome.php" method="post">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box message-box">
+                            <input type="text" placeholder="Enter your message">
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Send Now" onclick="myFunction()">
+
+                        </div>
+                    </form>
+                    <script>
+                        function myFunction() {
+                            alert("Thank you for respone. Have a good day");
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+
+    </div>
+</body>
+
+</html>

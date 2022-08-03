@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:wght@200&family=Orbitron&family=Rajdhani:wght@500&family=Roboto+Mono:wght@500&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Hostel Management</title>
+</head>
+<style>
+    *,
+    *:after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        font-size: 28px;
+        background-color: whitesmoke;
+    }
+
+    .container {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+    }
+
+    label span {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px 10px 10px;
+        border-radius: 31px;
+        transition: .25 ease;
+    }
+
+    label span:hover,
+    input[type="radio"]:checked+span {
+        background-color: #d6d6e5;
+    }
+
+    label span::before {
+        content: "";
+        background-color: #fff;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: .25 ease;
+        box-shadow: inset 0 0 0 2px #00005c;
+    }
+
+    #contact {
+        position: relative;
+        margin-top: 40px;
+    }
+
+
+    input[type="radio"]:checked+span:before {
+        box-shadow: inset 0 0 0 10px #00005c;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .h-primary {
+        font-size: 2.8rem;
+        padding: px;
+        font-family: 'Nunito', sans-serif;
+
+
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    .btn2 {
+        padding: 10px 15px;
+        /* border: 2px solid white; */
+        background-color: black;
+        color: white;
+        margin: 20px 300px;
+        border-radius: 8px;
+        font-size: 18px;
+
+    }
+
+    .btn2:hover {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    }
+
+    .blue {
+        color: #00005c;
+        font-family: 'Rajdhani', sans-serif;
+    }
+</style>
+
+<body>
+    <section id="contact">
+        <h1 class="h-primary center blue">Indian Institute of Information Technology , Nagpur</h1>
+        <h2 class="h-primary center blue">
+            भारतीय सूचना प्रौद्योगिकी संस्थान, नागपुर</h2>
+        <h1 class="h-primary center">HOSTEL ALLOCATION MANAGEMENT</h1> 
+        {{!-- <h1 class="h-primary center"><img src="iiitn.jpg" alt=""></h1> --}}
+        <div id="contact-box">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div><br>
+                <div class="form-group">
+                    <label for="RollNo">Roll No.</label>
+                    <input type="text" name="RollNo" id="email" placeholder="Enter your Roll No.">
+                </div><br>
+                <div class="form-group">
+                    <label for="html">Room Type</label>
+                    <div class="container">
+                        <label>
+                            <input type="radio" name="html" value="Single" class="wdi" />
+                            <span>Single</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="html" value="Double" class="wdi" />
+                            <span>Double</span>
+                        </label>
+                    
+                    </div>
+
+                    <!-- <input type="phone" name="phone" id="phone" placeholder="Enter your phone number"> -->
+
+
+                </div>
+                <div class="form-group">
+
+                    <button type="submit" class="btn2" value="Register">Submit</button>
+            </form>
+        </div>
+</body>
+
+</html>
+
+</body>
+
+</html>

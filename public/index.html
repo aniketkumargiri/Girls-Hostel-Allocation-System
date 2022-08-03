@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Allocation System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crete+Round&family=Francois+One&family=Spectral:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    img:hover {
+        opacity: 0.7;
+    }
+    
+    div.background {
+        background: url(dtemp.jpg) repeat;
+        border: 2px solid black;
+    }
+    
+    div.transbox {
+        margin: 15px;
+        background-color: #ffffff;
+        border: 1px solid black;
+        opacity: 0.6;
+        padding: -10px;
+    }
+    
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    /* Create four equal columns that floats next to each other */
+    
+    .column {
+        float: left;
+        width: 22%;
+        padding: 10px;
+        height: 250px;
+        margin: 10px;
+        border-radius: 5px;
+        /* Should be removed. Only for demonstration */
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .button {
+        /* background-color: #4CAF50; */
+        /* Green */
+        font-family: "Poppins", sans-serif;
+        border: none;
+        color: rgb(221, 58, 58);
+        padding: 13px 15px;
+        text-align: center;
+        text-decoration: #555555;
+        display: table-footer-group;
+        font-size: 22px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button1 {
+        background-color: rgb(202, 178, 178);
+        color: black;
+        border: 1px solid rgb(82, 77, 77);
+    }
+    
+    .button1:hover {
+        background-color: rgb(49, 6, 46);
+        color: white;
+        border-end-end-radius: 20%;
+        border-start-start-radius: 20%;
+    }
+    
+    .button2 {
+        background-color: rgb(202, 178, 178);
+        color: black;
+        border: 1px solid rgb(82, 77, 77);
+    }
+    
+    .button2:hover {
+        background-color: rgb(49, 6, 46);
+        color: white;
+        border-end-end-radius: 20%;
+        border-start-start-radius: 20%;
+    }
+    
+    .button3 {
+        background-color: rgb(202, 178, 178);
+        color: black;
+        border: 1px solid rgb(82, 77, 77);
+    }
+    
+    .button3:hover {
+        background-color: rgb(49, 6, 46);
+        color: white;
+        /* border-radius: 30%; */
+        border-end-end-radius: 20%;
+        border-start-start-radius: 20%;
+    }
+    
+    .button4 {
+        background-color: rgb(36, 15, 15);
+        color: rgb(245, 244, 244);
+        /* border-radius: 15%; */
+        border: 1px solid rgb(255, 255, 255);
+        left: 26%;
+        /* border: 2px solid #ebf1f1; */
+        position: relative;
+    }
+    
+    .button4:hover {
+        background-color: rgb(250, 250, 250);
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 0 0 10px 4px #34495e;
+    }
+    
+    video {
+        width: 50% !important;
+        height: 50% !important;
+        background-image: url(bookshelfHome.png);
+    }
+    
+    nir {
+        text-align: center;
+        position: relative;
+    }
+</style>
+
+<body onload="startTime()" onload="alert(message)">
+    <!-- /* <-------------------------- nav bar ---------------------------------->
+    <header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dev.html">Developers</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="https://iiitn.ac.in/photo-gallery-album/upcoming-campus-photo/">Photos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="conta">
+        <div>
+            <span class="text1" style="font-family: 'Cinzel', serif;">Indian Institute of Information Techology,
+                Nagpur</span><br>
+            <h3 class="text1">
+                भारतीय सूचना प्रौद्योगिकी संस्थान, नागपुर</h3>
+        </div>
+        <div>&nbsp;</div>
+
+        <div>
+            <span class="text2" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Girls
+                Hostel Allocation System</span><br>
+        </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+
+    </div>
+
+    <div class="gradient">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>
+            <a href="https://iiitn.ac.in/"><button class="button button4">Official Website</button></a>
+            <a href="https://iiitn.ac.in/photo-gallery-album/upcoming-campus-photo/"><button
+                    class="button button4">Browse Hostel Galary</button></a>
+            <a href="https://iiitn.ac.in/page.php?id=42"><button class="button button4">Fee Payement</button></a>
+        </div>
+
+        <table>
+            <tr style="position: relative;left:1%;">
+                <td width=15%>
+                    <div class="container">
+                        <div class="card">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <a href="HostelForm.html">
+                                        <div class="icon">
+
+                                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                                            <div>
+                                                <h2 style="height: 10px;text-align: center;text-decoration: solid;text-shadow: 5px;color: white;">
+                                                    Hostel Form
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Hostel Form
+                                    </h3>
+                                    <p>Fill form for hostel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td width=15%>
+                    <div class="container">
+                        <div class="card">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <a href="personal.html">
+                                        <div class="icon">
+                                            <div>
+                                                <h2 style="height: 10px;text-align: center;text-decoration: solid;text-shadow: 5px;color: white;">
+                                                    Personal Details
+                                                </h2>
+                                            </div>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Personal Details
+                                    </h3>
+                                    <p>Submit your deatils here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td width=15%>
+                    <div class="container">
+                        <div class="card">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <a href="swap_main.html">
+                                        <div class="icon">
+                                            <i class="fa fa-atom" aria-hidden="true"></i>
+                                            <div>
+                                                <h2 style="height: 10px;text-align: center;text-decoration: solid;text-shadow: 5px;color: white;">
+                                                    Room Change Form
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Room Change form
+                                    </h3>
+                                    <p>Fill form to change room</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td width=15%>
+                    <div class="container">
+                        <div class="card">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <a href="delete_main.html">
+                                        <div class="icon">
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                            <div>
+                                                <h2 style="height: 10px;text-align: center;text-decoration: solid;text-shadow: 5px;color: white;">
+                                                    Vacate Room
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Vacate Room
+                                    </h3>
+                                    <p>Request to leave room</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- <div class="gradient">
+        
+    </div> -->
+
+    <!--Clock Script-->
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+    <!-- /* <-------------------------- The Bookeshelf ---------------------------------->
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script>
+        $(window).scrolldown(function() {
+            if ($(window).scrollTop()) {
+                $("nav").addClass("black");
+            } else {
+                $("nav").removeClass("black")
+            }
+        })
+    </script>
+    <!-- /* <-------------------------- foooter ---------------------------------->
+
+    <div class="fbody">
+        <footer class="footer">
+            <div class="fcontainer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Team</h4>
+                        <ul>
+                            <li><a href="#">Manisha Koranga BT20CSE033</a></li>
+                            <li><a href="#">Nilay Singh BT20CSE071</a></li>
+                            <li><a href="#">Aniket Kumar Giri BT20CSE089</a></li>
+                            <li><a href="#">Utkarsh Adlakha BT20SCSE099</a></li>
+                            <li><a href="#">Ajay Saini BT20CSE121</a></li>
+                            <li><a href="#">Niraj Matere BT20SCSE138</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Find</h4>
+                        <ul>
+                            <li><a href="HostelForm.html">Hostel form</a></li>
+                            <li><a href="personal.html">Personal Details</a></li>
+                            <li><a href="swap_main.html">Room Change Request</a></li>
+                            <li><a href="delete_main.html">Vacate Room</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a href="#">Permanent Address: Survey No. 140,141/1 behind Br. Sheshrao Wankhade
+                                    Shetkari Sahkari Soot Girni, Village - Waranga, PO - Dongargaon(Butibori), Tahsil-
+                                    Nagpur (Rural), District Nagpur, Maharashtra- 441108</a></li>
+                            <li><a href="#">Contact: 9405215010</a></li>
+                            <li><a href="mailTo:registrar@iiitn.ac.in">Mail id: registrar@iiitn.ac.in</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/iiitnagpur/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/iiitnofficial"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="footer-col">
+                            <div id="txt" style="text-align: center; font-size: 18px; color: #bbbb;margin-top: 10px;margin-left: -14px;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:wght@200&family=Orbitron&family=Rajdhani:wght@500&family=Roboto+Mono:wght@500&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Girls Hostel Management</title>
+</head>
+<style>
+    *,
+    *:after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --navbarheight: 10px;
+    }
+
+    #navbar {
+        position: relative;
+    }
+
+    /* navigation bar */
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+
+
+    }
+
+    /*navigation bar: logo and image */
+    #logo {
+        margin: 30px 50px;
+        height: 50px;
+    }
+
+    #logo img {
+        margin: 0px 0px;
+        height: 45px;
+        width: 55px;
+        /* filter: invert(1); */
+    }
+
+    #navbar ul {
+        display: flex;
+        /* font-family: 'Baloo Chettan 2', cursive; */
+        font-weight: bolder;
+        font-family: 'Nunito', sans-serif;
+
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        height: 70%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    #navbar ul li {
+        color: white;
+        display: flex;
+        list-style: none;
+        padding: 10px;
+        font-size: 1.3rem;
+        font-family: 'Nunito', sans-serif;
+        margin-bottom: 25px;
+
+
+    }
+
+    #navbar ul li a {
+        display: block;
+        padding: 3px 30px;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: 0.5s;
+        /* color: red; */
+
+        /* border: 2px solid black; */
+
+    }
+
+    #navbar a:hover {
+        background-color: rgb(72, 66, 66);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        font-size: 28px;
+        background-color: whitesmoke;
+    }
+
+    .container {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+    }
+
+    label span {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px 10px 10px;
+        border-radius: 31px;
+        transition: .25 ease;
+    }
+
+    label span:hover,
+    input[type="radio"]:checked+span {
+        background-color: #d6d6e5;
+    }
+
+    label span::before {
+        content: "";
+        background-color: #fff;
+        height: 42px;
+        width: 42px;
+        border-radius: 20%;
+        margin-right: 10px;
+        transition: .25 ease;
+        box-shadow: inset 0 0 0 2px #00005c;
+    }
+
+    #contact {
+        position: relative;
+        margin-top: 30px;
+    }
+
+
+    input[type="radio"]:checked+span:before {
+        box-shadow: inset 0 0 0 10px #00005c;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .h-primary {
+        font-size: 2.8rem;
+        padding: -170px;
+        font-family: 'Nunito', sans-serif;
+
+
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    .btn2 {
+        padding: 10px 15px;
+        /* border: 2px solid white; */
+        background-color: black;
+        color: white;
+        margin: 20px 300px;
+        border-radius: 8px;
+        font-size: 18px;
+
+    }
+
+    .btn2:hover {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    }
+
+    .blue {
+        color: #00005c;
+        font-family: 'Rajdhani', sans-serif;
+        margin-top: 140px;
+    }
+
+    .small {
+        margin-top: -40px;
+        font-size: 40px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="developers_page/dev.html">Developers</a></li>
+            <li class="item"><a href="contactus.html">Contact us</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        <h1 class="h-primary center blue">Indian Institute of Information Technology , Nagpur</h1>
+        <h2 class="h-primary center blue small">
+            भारतीय सूचना प्रौद्योगिकी संस्थान, नागपुर</h2>
+        <h1 class="h-primary center">HOSTEL ALLOCATION MANAGEMENT</h1>
+
+        <div id="contact-box">
+
+            <label for="html">Select Your Preference</label>
+            <div class="container">
+                <a href="TripleFormRandom_1stYear.html">
+
+                    <label>
+                        <span>Random</span>
+                    </label>
+                </a>
+                <a href="TripleFormFixed_1stYear.html">
+                    <label>
+                        <span>Priority Based</span>
+                    </label>
+                </a>
+
+            </div>
+
+            <!-- <input type="phone" name="phone" id="phone" placeholder="Enter your phone number"> -->
+
+
+        </div>
+</body>
+
+</html>
+</body>
+
+</html>
